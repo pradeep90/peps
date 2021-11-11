@@ -746,11 +746,13 @@ analyze.
 Reference Implementations
 =========================
 
-Mypy: Proof of concept implementation [#mypy-implementation]_
+Mypy: Proof of concept implementation in `Mypy
+<https://github.com/Gobot1234/mypy>`_.
 
 Pyright: v1.1.184
 
-Runtime implementation of ``Self``: [#self-implementation]_
+Runtime implementation of ``Self``: `PR
+<https://github.com/python/typing/pull/933>`_.
 
 Resources
 =========
@@ -763,11 +765,11 @@ Other issues that discuss this include `Mypy issue #2354
 <https://github.com/python/mypy/issues/2354>`_ - Self types in generic
 classes.
 
-**Pradeep** made a concrete proposal at the PyCon Typing Summit 2021:
+Pradeep made a concrete proposal at the PyCon Typing Summit 2021:
  `recorded talk <https://youtu.be/ld9rwCvGdhc?t=3260>`_, `slides
  <https://drive.google.com/file/d/1x-qoDVY_OvLpIV1EwT7m3vm4HrgubHPG/view>`_.
 
-**James** brought up the proposal independently on typing-sig:
+James brought up the proposal independently on typing-sig:
 `Typing-sig thread <https://mail.python.org/archives/list/typing-sig@python.org/thread/SJAANGA2CWZ6D6TJ7KOPG7PZQC56K73S/#B2CBLQDHXQ5HMFUMS4VNY2D4YDCFT64Q>`_.
 
 Other languages have similar ways to express the type of the enclosing class:
