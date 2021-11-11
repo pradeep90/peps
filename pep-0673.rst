@@ -134,7 +134,7 @@ Usage statistics
 
 We analyzed popular open-source projects [#self-type-usage-stats]_ and found
 that patterns like the above were used about **40%** as often as popular types
-like ``dict`` or ``Callable``. For example, in typeshed alone, such “Self”
+like ``dict`` or ``Callable``. For example, in typeshed alone, such "Self"
 types are used 523 times, compared to 1286 uses of ``dict`` and 1314 uses of
 ``Callable`` as of October 2021 [#callable-dict-usage-stats]_. This suggests
 that a ``Self`` type will be used quite often and users will benefit a lot
@@ -314,7 +314,7 @@ have a ``LinkedList`` whose elements must be subclasses of the current class.
     # OK
     LinkedList[int](value=1, next=LinkedList[int](value=2))
     # Not OK
-    LinkedList[int](value=1, next=LinkedList[str](value=”hello”))
+    LinkedList[int](value=1, next=LinkedList[str](value="hello"))
 
 
 However, annotating the ``next`` attribute as ``LinkedList[T]`` allows invalid
@@ -404,7 +404,7 @@ This is equivalent to writing:
 
 ::
 
-    Self = TypeVar(“Self”, bound=”Container[Any]”)
+    Self = TypeVar("Self", bound="Container[Any]")
 
     class Container(Generic[T]):
         value: T
@@ -423,7 +423,7 @@ an object of generic type ``Container[T]``, ``Self`` is bound to
         int_container: Container[int]
         str_container: Container[str]
         reveal_type(int_container.set_value(42))  # => Container[int]
-        reveal_type(str_container.set_value(“hello”))  # => Container[str]
+        reveal_type(str_container.set_value("hello"))  # => Container[str]
 
     def object_with_generic_type(
         container: Container[T], value: T,
@@ -433,7 +433,7 @@ an object of generic type ``Container[T]``, ``Self`` is bound to
 
 The PEP doesn’t specify the exact type of ``self.value`` within the method
 ``set_value``. Some type checkers may choose to implement ``Self`` types using
-class-local type variables with ``Self = TypeVar(“Self”,
+class-local type variables with ``Self = TypeVar("Self",
 bound=Container[T])``, which will infer a precise type ``T``. However, given
 that class-local type variables are not a standardized type system feature, it
 is also acceptable to infer ``Any`` for ``self.value``. We leave this up to
