@@ -537,8 +537,8 @@ Backwards Compatibility
 this doesn't require any changes to the Python runtime itself. :pep:`586`
 already backports ``Literal``, so this PEP does not need to change it.
 
-As :pep:`PEP 586 mentions
-<586#backwards-compatibility>`,
+As PEP 586 `mentions
+<https://www.python.org/dev/peps/pep-0586/#backwards-compatibility>`_,
 type checkers "should feel free to experiment with more sophisticated
 inference techniques". So, if the type checker infers a literal string
 type for an unannotated variable that is initialized with a literal
